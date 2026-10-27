@@ -23,7 +23,9 @@ export const site = {
   // Menu: tambah item saat scene-nya sudah dibuat (Story, Skills, ...)
   nav: [
     ['01', 'Work', '#work'],
-    ['02', 'Contact', '#contact'],
+    ['02', 'Story', '#story'],
+    ['03', 'Skills', '#skills'],
+    ['04', 'Contact', '#contact'],
   ],
 }
 export const isFilled = (v) => typeof v === 'string' && !v.includes('[ISI]')

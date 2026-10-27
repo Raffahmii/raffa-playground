@@ -7,11 +7,13 @@ import { useGSAP } from '@gsap/react'
 import Grain from './components/global/Grain'
 import Cursor from './components/global/Cursor'
 import Navbar from './components/global/Navbar'
+import Loader from './components/global/Loader'
 import Home from './pages/Home'
 import CaseStudy from './pages/CaseStudy'
 import NotFound from './pages/NotFound'
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
+try { window.__loaderDone = !!sessionStorage.getItem('seen') } catch { window.__loaderDone = false }
 
 export default function App() {
   const { pathname } = useLocation()
@@ -37,6 +39,7 @@ export default function App() {
 
   return (
     <>
+      <Loader />
       <Grain />
       <Cursor />
       <Navbar />

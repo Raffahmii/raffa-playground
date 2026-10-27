@@ -22,13 +22,16 @@ export default function Hero() {
     const mm = gsap.matchMedia()
     mm.add('(prefers-reduced-motion: no-preference)', () => {
       const st = { trigger: root.current, start: 'top top', end: 'bottom top', scrub: true }
-      gsap.timeline({ defaults: { ease: 'power4.out' }, delay: 0.2 })
+      const tl = gsap.timeline({ defaults: { ease: 'power4.out' }, delay: 0.2, paused: true })
         .from('.h-bg', { opacity: 0, duration: 1.2 }, 0)
         .from('.h-blob', { scale: 0.6, opacity: 0, duration: 1.1 }, 0.1)
         .from('.h-photo', { yPercent: 10, opacity: 0, duration: 1.1 }, 0.25)
         .from('.char', { yPercent: 110, stagger: 0.05, duration: 0.9 }, 0.5)
         .from('.h-fade', { y: 24, opacity: 0, stagger: 0.08, duration: 0.8 }, 0.7)
         .from('.h-card', { y: 40, opacity: 0, stagger: 0.12, duration: 0.9 }, 0.9)
+      const go = () => tl.play()
+      if (window.__loaderDone) go()
+      else window.addEventListener('loader:done', go, { once: true })
       gsap.to('.h-bg', { xPercent: -8, ease: 'none', scrollTrigger: st })
       gsap.to('.h-photo-wrap', { yPercent: -8, ease: 'none', scrollTrigger: st })
       gsap.to('.h-blob-wrap', { yPercent: 12, ease: 'none', scrollTrigger: st })

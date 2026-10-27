@@ -1,0 +1,4 @@
+[
+  { "year": "2026", "items": [{ "t": "Laravel", "done": true }, { "t": "Portfolio", "done": true }, { "t": "Freelance", "done": false }, { "t": "UKK", "done": false }] },
+  { "year": "2027", "items": [{ "t": "PKL", "done": false }, { "t": "Internship", "done": false }, { "t": "Data analyst role", "done": false }] }
+]
