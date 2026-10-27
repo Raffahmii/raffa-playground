@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <g fill="#FFFFFF">
+    <!-- Batang Utama Vertikal (Stem) tebal ala Bricolage Grotesque -->
+    <path d="M 20,15 H 37 V 85 H 20 Z" />
+    
+    <!-- Mangkuk/Loop Atas (Bowl) -->
+    <path d="M 37,15 H 58 C 73,15 80,24 80,36 C 80,47 72,55 58,55 H 37 Z 
+             M 37,30 H 55 C 61,30 64,33 64,36 C 64,39 61,40 55,40 H 37 Z" />
+    
+    <!-- Kaki Kanan Melengkung Senyum (Smiling Leg) -->
+    <path d="M 45,50 C 53,50 60,54 67,62 C 75,72 79,78 88,81 C 93,83 95,78 90,72 C 84,62 76,51 62,41 Z" />
+  </g>
+</svg>

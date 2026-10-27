@@ -1,0 +1,22 @@
+[
+  { "slug": "jejak-visual", "title": "Jejak Visual", "type": "Web App", "year": 2026, "featured": true,
+    "stack": ["Laravel", "MySQL", "Tailwind"], "summary": "[ISI: masalah dan hasil, 1-2 kalimat]",
+    "cover": "/img/projects/jejak-visual/cover.jpg", "preview": "/img/projects/jejak-visual/preview.jpg",
+    "desktop": "/img/projects/jejak-visual/desktop-1.png", "mobile": "/img/projects/jejak-visual/mobile-1.png", "links": { "live": "", "github": "" } },
+  { "slug": "amazon-sales-analysis", "title": "Amazon Sales Analysis", "type": "Data Analysis", "year": 2026, "featured": true,
+    "stack": ["[ISI]"], "summary": "[ISI: masalah dan hasil, 1-2 kalimat]",
+    "cover": "/img/projects/amazon-sales-analysis/cover.jpg", "preview": "/img/projects/amazon-sales-analysis/preview.png",
+    "desktop": "/img/projects/amazon-sales-analysis/desktop-1.png", "mobile": "/img/projects/amazon-sales-analysis/mobile-1.jpg", "links": { "live": "", "github": "" } },
+  { "slug": "mading-indonesia", "title": "Mading Indonesia", "type": "Web App", "year": 2026, "featured": true,
+    "stack": ["[ISI]"], "summary": "[ISI: masalah dan hasil, 1-2 kalimat]",
+    "cover": "/img/projects/mading-indonesia/cover.jpg", "preview": "/img/projects/mading-indonesia/preview.jpg",
+    "desktop": "/img/projects/mading-indonesia/desktop-1.png", "mobile": "/img/projects/mading-indonesia/mobile-1.png", "links": { "live": "", "github": "" } },
+  { "slug": "retail-performance", "title": "Retail Performance", "type": "Data Analysis", "year": 2026, "featured": true,
+    "stack": ["[ISI]"], "summary": "[ISI: masalah dan hasil, 1-2 kalimat]",
+    "cover": "/img/projects/retail-performance/cover.jpg", "preview": "/img/projects/retail-performance/preview.jpg",
+    "desktop": "/img/projects/retail-performance/desktop-1.png", "mobile": "/img/projects/retail-performance/mobile-1.png", "links": { "live": "", "github": "" } },
+  { "slug": "kesenian", "title": "Kesenian", "type": "Web App", "year": 2026, "featured": false,
+    "stack": ["[ISI]"], "summary": "[ISI: masalah dan hasil, 1-2 kalimat]",
+    "cover": "/img/projects/kesenian/cover.jpg", "preview": "/img/projects/kesenian/preview.jpg",
+    "desktop": "/img/projects/kesenian/desktop-1.png", "mobile": "", "links": { "live": "", "github": "" } }
+]
