@@ -34,6 +34,7 @@ export default function Contact() {
   return (
     <section id="contact" ref={root} className="relative overflow-hidden bg-wine pt-32" style={{ backgroundImage: 'radial-gradient(900px 600px at 50% 105%, rgba(228,96,122,.45), transparent 62%)' }}>
       <div className="px-6 md:px-16">
+        <p className="label mb-4 text-blush">Connect</p>
         <h2 className="font-display text-[15vw] font-extrabold leading-[.95] tracking-[-.03em] md:text-[10vw]">
           <Chars text="LET’S BUILD" />
         </h2>
@@ -62,7 +63,7 @@ export default function Contact() {
               </Magnetic>
             </div>
           </div>
-          <p className="c-fade max-w-sm text-xl text-cream/90">Open for internship, PKL, and freelance. Usually replies within a day.</p>
+          <p className="c-fade max-w-sm text-xl text-cream/90">Got an interesting project, a data challenge, or just want to talk tech? Let’s build something.</p>
         </div>
       </div>
 
@@ -71,7 +72,7 @@ export default function Contact() {
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-transparent to-ink" />
       </div>
       <footer className="label relative flex flex-wrap justify-between gap-4 bg-ink px-6 py-6 text-cream/70 md:px-16">
-        <span>© 2026 {site.name}</span>
+        <span className="flex items-center gap-3"><img src="/brand/woodmark-raffa-w.svg" alt="Raffa" className="h-5 w-auto" />© 2026</span>
         <span>{site.location}</span>
         <span>Powered by coffee</span>
         <button onClick={() => window.__lenis?.scrollTo(0)}>Back to top ↑</button>

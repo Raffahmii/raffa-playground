@@ -1,9 +1,6 @@
 [
-  { "title": "Frontend", "items": ["HTML", "CSS", "JavaScript", "Bootstrap", "Tailwind", "React"] },
-  { "title": "Backend", "items": ["PHP", "Laravel", "REST API"] },
-  { "title": "Database", "items": ["MySQL", "PostgreSQL"] },
-  { "title": "Data", "items": ["Python", "Pandas", "NumPy", "Matplotlib", "Tableau", "Excel"] },
-  { "title": "Tools", "items": ["Git", "GitHub", "VS Code", "Figma", "Notion", "Canva"] },
-  { "title": "Soft skill", "items": ["Communication", "Problem solving", "Teamwork", "Discipline", "Time management"] },
-  { "title": "Language", "items": ["Indonesian (native)", "English [ISI level]"] }
+  { "title": "Data Analyst", "items": [["Excel","Advanced"],["Pivot Tables","Advanced"],["Excel Dashboard","Advanced"],["Tableau","Intermediate"],["Data Cleaning","Intermediate"],["Exploratory Analysis","Intermediate"],["Data Visualization","Intermediate"],["KPI & Business Reporting","Intermediate"],["SQL (PostgreSQL)","Intermediate"],["Python (Pandas)","Intermediate"]] },
+  { "title": "Web Developer", "items": [["HTML5","Advanced"],["CSS3","Intermediate"],["Bootstrap","Intermediate"],["Tailwind CSS","Intermediate"],["JavaScript","Intermediate"],["React.js","Basic"],["PHP Native","Intermediate"],["Laravel","Intermediate"],["Authentication & Roles","Intermediate"],["CRUD Applications","Intermediate"]] },
+  { "title": "Database & System Design", "items": [["PostgreSQL","Intermediate"],["MySQL","Intermediate"],["Database Design","Intermediate"],["ERD","Intermediate"],["Flowchart & DFD","Intermediate"],["System Analysis","Intermediate"],["Migrations","Intermediate"],["Data Normalization","Basic"]] },
+  { "title": "Tools & Practices", "items": [["Git & GitHub","Intermediate"],["Jupyter Notebook","Intermediate"],["MVC Architecture","Intermediate"],["REST API","Basic"],["Project Documentation","Intermediate"],["README Writing","Intermediate"],["Insight Reporting","Intermediate"],["Dashboard Presentation","Intermediate"]] }
 ]

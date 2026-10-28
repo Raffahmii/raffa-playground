@@ -1,0 +1,18 @@
+{
+  "habits": [
+    { "t": "System-Driven", "d": "Builds rigorous roadmaps for everything: learning, workouts, projects, and communication." },
+    { "t": "Practical Training", "d": "Frequently runs simulation drills for stakeholder meetings, HR interviews, and client pitches." },
+    { "t": "Laptop Setup", "d": "Installed databases, Git, and development environments before touching any games on a new laptop." },
+    { "t": "README Standard", "d": "Treats project documentation and README files with the same meticulous care as production code." }
+  ],
+  "goals": [
+    { "t": "Real Experience", "d": "Secure valuable hands-on practice through upcoming internships (PKL) and freelance projects." },
+    { "t": "Professional Readiness", "d": "Master technical execution, English communication, and client negotiation simultaneously." },
+    { "t": "Trusted Problem Solver", "d": "Build a robust portfolio of real-world projects to become a reliable, data-driven professional by graduation." }
+  ],
+  "reflection": [
+    { "t": "From Tools to Thinking", "d": "Shifted core focus from just mastering SQL, Python, and Tableau to solving actual business problems." },
+    { "t": "Communication Mastery", "d": "Upgraded from basic chatting to practicing executive meetings, client negotiations, and structured storytelling." },
+    { "t": "Consultant Mindset", "d": "Evolved from viewing data as raw numbers to defining questions, generating insights, and driving decisions." }
+  ]
+}

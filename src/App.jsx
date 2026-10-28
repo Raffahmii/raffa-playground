@@ -11,6 +11,7 @@ import Loader from './components/global/Loader'
 import Home from './pages/Home'
 import CaseStudy from './pages/CaseStudy'
 import NotFound from './pages/NotFound'
+import Certificates from './pages/Certificates'
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
 try { window.__loaderDone = !!sessionStorage.getItem('seen') } catch { window.__loaderDone = false }
@@ -33,6 +34,13 @@ export default function App() {
   }, [])
 
   useEffect(() => {
+    const r = () => ScrollTrigger.refresh()
+    window.addEventListener('load', r)
+    document.fonts?.ready.then(r)
+    return () => window.removeEventListener('load', r)
+  }, [])
+
+  useEffect(() => {
     window.__lenis?.scrollTo(0, { immediate: true })
     ScrollTrigger.refresh()
   }, [pathname])
@@ -46,6 +54,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/work/:slug" element={<CaseStudy />} />
+        <Route path="/certificates" element={<Certificates />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

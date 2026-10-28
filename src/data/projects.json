@@ -1,22 +1,143 @@
 [
-  { "slug": "jejak-visual", "title": "Jejak Visual", "type": "Web App", "year": 2026, "featured": true,
-    "stack": ["Laravel", "MySQL", "Tailwind"], "summary": "[ISI: masalah dan hasil, 1-2 kalimat]",
-    "cover": "/img/projects/jejak-visual/cover.jpg", "preview": "/img/projects/jejak-visual/preview.jpg",
-    "desktop": "/img/projects/jejak-visual/desktop-1.png", "mobile": "/img/projects/jejak-visual/mobile-1.png", "links": { "live": "", "github": "" } },
-  { "slug": "amazon-sales-analysis", "title": "Amazon Sales Analysis", "type": "Data Analysis", "year": 2026, "featured": true,
-    "stack": ["[ISI]"], "summary": "[ISI: masalah dan hasil, 1-2 kalimat]",
-    "cover": "/img/projects/amazon-sales-analysis/cover.jpg", "preview": "/img/projects/amazon-sales-analysis/preview.png",
-    "desktop": "/img/projects/amazon-sales-analysis/desktop-1.png", "mobile": "/img/projects/amazon-sales-analysis/mobile-1.jpg", "links": { "live": "", "github": "" } },
-  { "slug": "mading-indonesia", "title": "Mading Indonesia", "type": "Web App", "year": 2026, "featured": true,
-    "stack": ["[ISI]"], "summary": "[ISI: masalah dan hasil, 1-2 kalimat]",
-    "cover": "/img/projects/mading-indonesia/cover.jpg", "preview": "/img/projects/mading-indonesia/preview.jpg",
-    "desktop": "/img/projects/mading-indonesia/desktop-1.png", "mobile": "/img/projects/mading-indonesia/mobile-1.png", "links": { "live": "", "github": "" } },
-  { "slug": "retail-performance", "title": "Retail Performance", "type": "Data Analysis", "year": 2026, "featured": true,
-    "stack": ["[ISI]"], "summary": "[ISI: masalah dan hasil, 1-2 kalimat]",
-    "cover": "/img/projects/retail-performance/cover.jpg", "preview": "/img/projects/retail-performance/preview.jpg",
-    "desktop": "/img/projects/retail-performance/desktop-1.png", "mobile": "/img/projects/retail-performance/mobile-1.png", "links": { "live": "", "github": "" } },
-  { "slug": "kesenian", "title": "Kesenian", "type": "Web App", "year": 2026, "featured": false,
-    "stack": ["[ISI]"], "summary": "[ISI: masalah dan hasil, 1-2 kalimat]",
-    "cover": "/img/projects/kesenian/cover.jpg", "preview": "/img/projects/kesenian/preview.jpg",
-    "desktop": "/img/projects/kesenian/desktop-1.png", "mobile": "", "links": { "live": "", "github": "" } }
+  { 
+    "slug": "jejak-visual", 
+    "title": "Jejak Visual", 
+    "type": "Web App", 
+    "year": 2026, 
+    "featured": true,
+    "stack": ["Laravel 12", "PostgreSQL", "Tailwind CSS"], 
+    "summary": "Platform berbagi gambar interaktif ala Pinterest untuk kreator visual, dilengkapi sistem moderasi konten, role-based access, dan fitur interaksi komunitas.",
+    "problem": "Kreator visual butuh wadah terpusat untuk mempublikasikan karya dan inspirasi tanpa bergantung pada platform asing. Di sisi lain, pengelola platform butuh sistem moderasi yang aman dan terstruktur untuk mencegah penyalahgunaan konten.",
+    "solution": "Membangun platform image-sharing dengan fitur Masonry Grid, sistem Like/Save/Comment, upload gambar yang aman, serta dashboard Admin khusus untuk moderasi postingan dan manajemen user.",
+    "details": [
+      { "title": "Masonry Visual Grid", "desc": "Tampilan gambar dinamis bergaya Pinterest yang responsif dan interaktif." },
+      { "title": "Interaksi Komunitas", "desc": "Fitur Like, Komentar, dan Penyelamatan Gambar (Save) untuk meningkatkan engagement." },
+      { "title": "Moderasi Admin", "desc": "Panel admin khusus untuk memblokir user nakal dan menghapus postingan yang melanggar." }
+    ],
+    "cover": "/img/projects/jejak-visual/cover.jpg", 
+    "preview": "/img/projects/jejak-visual/preview.jpg",
+    "desktop": [
+      "/img/projects/jejak-visual/desktop-1.png", 
+      "/img/projects/jejak-visual/desktop-2.png", 
+      "/img/projects/jejak-visual/desktop-3.png"
+    ], 
+    "mobile": [
+      "/img/projects/jejak-visual/mobile-1.png", 
+      "/img/projects/jejak-visual/mobile-2.png"
+    ], 
+    "video": "/img/projects/jejak-visual/demo.mp4",
+    "links": { "live": "", "github": "https://github.com/RaffaHmii" } 
+  },
+  { 
+    "slug": "amazon-sales", 
+    "title": "Amazon", 
+    "type": "Data Analysis", 
+    "year": 2026, 
+    "featured": true,
+    "stack": ["PostgreSQL", "Python", "Tableau"], 
+    "summary": "Analisis mendalam data transaksi penjualan Amazon 2023 (50.000 transaksi) untuk menemukan insight performa wilayah, kategori terlaris, dan optimalisasi strategi diskon.",
+    "problem": "Dataset transaksi tahunan yang sangat besar sulit dianalisis secara manual untuk menemukan tren bisnis. Perusahaan juga perlu tahu apakah strategi diskon yang diberikan benar-benar efektif menaikkan pendapatan atau justru menggerus margin.",
+    "solution": "Melakukan Data Cleaning dan EDA dengan Python (Pandas), ekstraksi KPI dengan SQL (PostgreSQL), lalu membangun Dashboard Tableau interaktif. Hasilnya mengungkap bahwa diskon >15% justru menurunkan Average Order Value, rekomendasi stok untuk kategori 'Beauty', dan fokus pemasaran di region Middle East & North America.",
+    "details": [
+      { "title": "Data Cleaning", "desc": "Memproses 50.000 baris data mentah menggunakan Python & Pandas untuk menghilangkan missing values." },
+      { "title": "KPI Extraction", "desc": "Query SQL kompleks untuk mendapatkan Total Revenue (Rp16.4M), AOV, dan Rating." },
+      { "title": "Tableau Dashboard", "desc": "Visualisasi interaktif untuk melihat tren pendapatan per Region dan Kategori produk." }
+    ],
+    "cover": "/img/projects/amazon-sales-analysis/cover.jpg", 
+    "preview": "/img/projects/amazon-sales-analysis/preview.png",
+    "desktop": [
+      "/img/projects/amazon-sales-analysis/desktop-1.png", 
+      "/img/projects/amazon-sales-analysis/desktop-2.png", 
+      "/img/projects/amazon-sales-analysis/desktop-3.png"
+    ], 
+    "mobile": [
+      "/img/projects/amazon-sales-analysis/mobile-1.jpg", 
+      "/img/projects/amazon-sales-analysis/mobile-2.jpg"
+    ], 
+    "video": "/img/projects/amazon-sales-analysis/demo.mp4",
+    "links": { "live": "", "github": "https://github.com/RaffaHmii" } 
+  },
+  { 
+    "slug": "mading-indonesia", 
+    "title": "Mading Indo", 
+    "type": "Web App", 
+    "year": 2026, 
+    "featured": true,
+    "stack": ["Laravel", "Tailwind", "Alpine.js"], 
+    "summary": "Platform informasi dan mading digital multi-tenant antar-universitas dengan dynamic branding, role-based access, dan workflow approval konten terpusat.",
+    "problem": "Informasi akademik, event, dan prestasi antar-kampus tersebar tidak teratur di berbagai media sosial masing-masing universitas. Dibutuhkan satu platform pusat yang bisa menampung banyak universitas tanpa kehilangan identitas visual masing-masing.",
+    "solution": "Membangun platform multi-tenant di mana tiap universitas punya warna brand dinamis (Dynamic Branding System). Admin universitas bisa membuat konten, namun harus melalui proses persetujuan (Approval Workflow) oleh Super Admin sebelum tayang ke publik.",
+    "details": [
+      { "title": "Multi-Tenant Architecture", "desc": "Satu codebase tunggal yang melayani banyak universitas dengan isolasi data yang ketat." },
+      { "title": "Dynamic Branding", "desc": "Warna UI otomatis berubah menyesuaikan identitas universitas yang sedang diakses." },
+      { "title": "Approval Workflow", "desc": "Konten dari Admin Univ harus di-review dan di-approve oleh Super Admin sebelum publish." }
+    ],
+    "cover": "/img/projects/mading-indonesia/cover.jpg", 
+    "preview": "/img/projects/mading-indonesia/preview.jpg",
+    "desktop": [
+      "/img/projects/mading-indonesia/desktop-1.png", 
+      "/img/projects/mading-indonesia/desktop-2.png", 
+      "/img/projects/mading-indonesia/desktop-3.png"
+    ], 
+    "mobile": [
+      "/img/projects/mading-indonesia/mobile-1.png", 
+      "/img/projects/mading-indonesia/mobile-2.png"
+    ], 
+    "video": "/img/projects/mading-indonesia/demo.mp4",
+    "links": { "live": "", "github": "https://github.com/RaffaHmii" } 
+  },
+  { 
+    "slug": "retail-performance", 
+    "title": "Retail Sales", 
+    "type": "Data Analysis", 
+    "year": 2026, 
+    "featured": true,
+    "stack": ["Excel", "Data Visualization", "Vanilla JS"], 
+    "summary": "Dashboard interaktif visualisasi data penjualan retail periode 2023-2024 dengan animasi KPI real-time dan fitur unduh dataset.",
+    "problem": "Data penjualan retail dari 991 transaksi tidak termonitor dengan baik. Manajemen kesulitan melihat pola penjualan bulanan, kategori produk terbaik, dan performa cabang secara cepat untuk mengambil keputusan.",
+    "solution": "Mengolah data menjadi website portofolio interaktif yang menampilkan KPI utama (Revenue Rp37,7jt, AOV Rp38rb, Kategori Sabun, Kota Jakarta) lengkap dengan animasi counter berjalan, chart interaktif, dan tombol unduh dataset Excel mentah.",
+    "details": [
+      { "title": "Interactive KPI Cards", "desc": "Animasi counter berjalan secara real-time saat pengunjung masuk ke viewport." },
+      { "title": "Advanced Excel Analysis", "desc": "Menggunakan PivotTable, PivotChart, Slicer, dan Timeline untuk analisis data mentah." },
+      { "title": "EmailJS Integration", "desc": "Form kontak terintegrasi langsung ke email tanpa reload halaman." }
+    ],
+    "cover": "/img/projects/retail-performance/cover.jpg", 
+    "preview": "/img/projects/retail-performance/preview.jpg",
+    "desktop": [
+      "/img/projects/retail-performance/desktop-1.png", 
+      "/img/projects/retail-performance/desktop-2.png", 
+      "/img/projects/retail-performance/desktop-3.png"
+    ], 
+    "mobile": [
+      "/img/projects/retail-performance/mobile-1.png", 
+      "/img/projects/retail-performance/mobile-2.png"
+    ], 
+    "video": "/img/projects/retail-performance/demo.mp4",
+    "links": { "live": "", "github": "https://github.com/RaffaHmii" } 
+  },
+  { 
+    "slug": "kesenian", 
+    "title": "Kesenian", 
+    "type": "Web App", 
+    "year": 2026, 
+    "featured": true,
+    "stack": ["Laravel 12", "PostgreSQL", "Tailwind CSS"], 
+    "summary": "Sistem Informasi Organisasi Kesenian Giri Adiwarna SMKN 1 Banjar untuk menggantikan administrasi manual menjadi sistem digital terpusat.",
+    "problem": "Administrasi organisasi kesenian masih dicatat di buku tulis dan file Excel terpisah-pisah. Data anggota, absensi, kas, dan dokumentasi prestasi sulit dicari, serta rawan hilang.",
+    "solution": "Membangun sistem informasi full-stack dengan role-based access (Pembina, Ketua, Sekretaris, Bendahara, PDD). Menyediakan fitur manajemen anggota, absensi digital, pencatatan kas, album dokumentasi, dan export laporan PDF/Excel.",
+    "details": [
+      { "title": "Role-Based Access", "desc": "Hak akses dibatasi dengan ketat mulai dari Pembina, Ketua, hingga Anggota." },
+      { "title": "Export Reports", "desc": "Generate laporan keuangan dan absensi secara instan dalam format PDF & Excel." },
+      { "title": "Digital Archive", "desc": "Menyimpan dokumentasi foto/video dan prestasi organisasi secara terpusat." }
+    ],
+    "cover": "/img/projects/kesenian/cover.jpg", 
+    "preview": "/img/projects/kesenian/preview.jpg",
+    "desktop": [
+      "/img/projects/kesenian/desktop-1.png", 
+      "/img/projects/kesenian/desktop-2.png"
+    ], 
+    "mobile": [], 
+    "video": "/img/projects/kesenian/demo.mp4",
+    "links": { "live": "", "github": "https://github.com/RaffaHmii" } 
+  }
 ]

@@ -1,8 +1,10 @@
+import Star from './Star'
+
 export default function Marquee({ words, className = '', speed = 30 }) {
   const items = [...words, ...words, ...words].map((w, i) => (
     <span key={i} className={`mx-5 inline-flex items-center gap-5 ${i % 2 ? 'stroke-text' : ''}`}>
       {w}
-      <span className="text-rose">✦</span>
+      <Star size={22} />
     </span>
   ))
   return (

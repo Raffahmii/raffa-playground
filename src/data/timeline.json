@@ -1,6 +1,12 @@
 [
-  { "year": "2024", "title": "First line of code", "text": "Started taking coding seriously. Python and SQL basics. [ISI cek]" },
-  { "year": "2025", "title": "Into the stack", "text": "Laravel, Tableau, and the first portfolio. [ISI cek]" },
-  { "year": "2026", "title": "Building for real", "text": "Jejak Visual, React, Next.js, and prep for PKL and UKK. [ISI cek]" },
-  { "year": "2027", "title": "Next chapter", "text": "Targeting PKL and an internship. Writing this chapter now." }
+  { "year": "2026", "title": "Foundations & Preparation", "status": "now", "tags": ["Foundation", "Building"],
+    "milestones": ["Built core projects", "Launched portfolio site", "Mastered communication drills", "Established initial freelance workflow"] },
+  { "year": "2027", "title": "Real-World Experience", "status": "next", "tags": ["Internship", "Clients"],
+    "milestones": ["Execute vocational internships", "Secure international freelance clients", "Transition into professional data roles"] },
+  { "year": "2028", "title": "Advanced Analytics", "status": "next", "tags": ["Analysis", "Pipelines"],
+    "milestones": ["Solve complex business challenges", "Scale advanced SQL/Python pipelines", "Strengthen personal engineering brand"] },
+  { "year": "2029", "title": "Network Expansion", "status": "next", "tags": ["Mentorship", "Scaling"],
+    "milestones": ["Drive high-impact client projects", "Expand professional network", "Mentor junior developers and analysts"] },
+  { "year": "2030+", "title": "Strategic Leadership", "status": "next", "tags": ["Leadership", "Strategy"],
+    "milestones": ["Lead data teams", "Influence executive business strategies", "Guide organizations through data-driven decisions"] }
 ]

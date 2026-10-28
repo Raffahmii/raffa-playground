@@ -3,11 +3,13 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { site } from '../../config/site'
 
-const words = [['I'], ['turn'], ['ideas'], ['into'], ['digital'], ['products'], ['—'], ['websites'], ['people'], ['enjoy', 1], ['using,'], ['and'], ['data'], ['people'], ['can'], ['actually'], ['understand.', 1]]
+// Tanda *...* = kata penekanan (serif italic)
+const statement = 'Building functional systems from *front to back*, driven by clean code and *solid data*.'
+const words = statement.split('*').flatMap((seg, i) => seg.split(' ').filter(Boolean).map((w) => [w, i % 2]))
 const cards = [
-  { n: '01', t: ['WEB', 'DEVELOPMENT'], d: 'From idea to deployed site.', chips: ['Laravel', 'React', 'Tailwind', 'MySQL'] },
-  { n: '02', t: ['DATA', 'ANALYTICS'], d: 'Turning raw numbers into decisions.', chips: ['Python', 'SQL', 'Excel', 'Tableau'] },
-  { n: '03', t: ['PROBLEM', 'SOLVING'], d: 'Stuck is just a step before solved.', chips: ['Debugging', 'Systems thinking'] },
+  { n: '01', t: ['WEB', 'DEVELOPMENT'], d: 'Crafting responsive, interactive, and high-performance web applications.', chips: ['Laravel', 'React', 'Tailwind CSS', 'JavaScript', 'PHP'] },
+  { n: '02', t: ['DATA', 'ANALYTICS'], d: 'Transforming messy numbers into clear, actionable business insights.', chips: ['Python', 'SQL', 'Tableau', 'Excel', 'Pandas'] },
+  { n: '03', t: ['PROBLEM', 'SOLVING'], d: 'Breaking down complex logic and engineering systematic solutions.', chips: ['Git', 'VS Code', 'Architecture Flow', 'Logical Modeling'] },
 ]
 
 export default function WhatIDo() {
@@ -29,6 +31,7 @@ export default function WhatIDo() {
       </svg>
       <div aria-hidden="true" className="absolute inset-0 opacity-30" style={{ backgroundImage: 'url(/textures/contour.svg)', backgroundSize: 'cover' }} />
       <div className="relative">
+        <p className="label mb-5 text-claret">Capabilities</p>
         <p className="stmt font-display text-[9vw] font-extrabold leading-[1.08] md:text-[4.4vw]">
           {words.map(([w, em], i) => (
             <span key={i} className={`w mr-[.25em] inline-block ${em ? 'font-serif font-normal italic text-claret' : ''}`}>{w}</span>
@@ -43,7 +46,7 @@ export default function WhatIDo() {
                 tabIndex={0}
                 onMouseEnter={() => setActive(i)}
                 onFocus={() => setActive(i)}
-                className={`wcard flex min-h-[320px] flex-col justify-between rounded-[28px] border-[1.5px] border-claret p-7 transition-colors duration-500 ${on ? 'bg-burgundy text-cream' : 'text-ink'}`}
+                className={`wcard flex min-h-[340px] flex-col justify-between rounded-[28px] border-[1.5px] border-claret p-7 transition-colors duration-500 ${on ? 'bg-burgundy text-cream' : 'text-ink'}`}
               >
                 <div className="flex items-start justify-between">
                   <span className="label opacity-70">{c.n}</span>
@@ -60,7 +63,7 @@ export default function WhatIDo() {
             )
           })}
         </div>
-        <p className="label mt-10 text-claret">{site.heroStats.map((s) => `${s.value} ${s.label}`).join(' · ')}</p>
+        {/* <p className="label mt-10 text-claret">{site.heroStats.map((s) => `${s.value} ${s.label}`).join(' · ')}</p> */}
       </div>
     </section>
   )

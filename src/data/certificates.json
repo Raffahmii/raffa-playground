@@ -1,8 +1,8 @@
 [
-  { "id": "samsung", "name": "Samsung SFT", "year": "2026", "image": "" },
-  { "id": "dicoding-python", "name": "Dicoding: Python basics", "year": "", "image": "" },
-  { "id": "dicoding-sql", "name": "Dicoding: SQL basics", "year": "", "image": "" },
-  { "id": "dicoding-ds", "name": "Dicoding: Data Science", "year": "", "image": "" },
-  { "id": "toeic", "name": "TOEIC", "year": "", "image": "/img/certs/toeic.jpeg" },
-  { "id": "pegadaian", "name": "Pegadaian [ISI nama program]", "year": "", "image": "/img/certs/pegadaian.jpeg" }
+  { "id": "samsung", "name": "Samsung SFT", "year": "2026", "image": "/img/certs/samsung.png" },
+  { "id": "dicoding-python", "name": "Dicoding: Python basics", "year": "2025", "image": "/img/certs/python.png" },
+  { "id": "dicoding-sql", "name": "Dicoding: SQL basics", "year": "2025", "image": "/img/certs/sql.png" },
+  { "id": "dicoding-ds", "name": "Dicoding: Data Science", "year": "2025", "image": "/img/certs/ds.png" },
+  { "id": "toeic", "name": "TOEIC", "year": "2026", "image": "/img/certs/toeic.jpeg" },
+  { "id": "pegadaian", "name": "Pegadaian Program", "year": "2026", "image": "/img/certs/pegadaian.jpeg" }
 ]

@@ -2,14 +2,20 @@ import { useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
+import Star from '../ui/Star'
 import skills from '../../data/skills.json'
 
 const row1 = ['LARAVEL', 'REACT', 'TAILWIND', 'MYSQL', 'PYTHON', 'SQL']
 const row2 = ['EXCEL', 'TABLEAU', 'GIT', 'FIGMA', 'GITHUB', 'PHP']
+const lvl = {
+  Advanced: 'bg-cream text-ink',
+  Intermediate: 'border border-cream/60',
+  Basic: 'border border-dashed border-cream/40 text-cream/70',
+}
 
 const Row = ({ words, cls }) => {
   const one = words.map((w, i) => (
-    <span key={w} className={`mr-9 inline-block ${i % 2 ? 'stroke-text' : ''}`}>{w} <span className="text-rose">✦</span></span>
+    <span key={w} className={`mr-9 inline-flex items-center gap-6 ${i % 2 ? 'stroke-text' : ''}`}>{w}<Star size="0.5em" /></span>
   ))
   return <div className={`mq ${cls} whitespace-nowrap font-display text-[16vw] font-extrabold leading-[1.1] md:text-[9vw]`}><span className="inline-block">{one}{one}</span></div>
 }
@@ -19,14 +25,14 @@ function Card({ s, i }) {
   const move = (e) => {
     if (!window.matchMedia('(hover: hover)').matches) return
     const r = ref.current.getBoundingClientRect()
-    gsap.to(ref.current, { rotateY: ((e.clientX - r.left) / r.width - 0.5) * 10, rotateX: -((e.clientY - r.top) / r.height - 0.5) * 10, transformPerspective: 700, duration: 0.4 })
+    gsap.to(ref.current, { rotateY: ((e.clientX - r.left) / r.width - 0.5) * 8, rotateX: -((e.clientY - r.top) / r.height - 0.5) * 8, transformPerspective: 800, duration: 0.4 })
   }
   const leave = () => gsap.to(ref.current, { rotateX: 0, rotateY: 0, duration: 0.6 })
   return (
-    <div ref={ref} onMouseMove={move} onMouseLeave={leave} className="sk rounded-[20px] border border-cream/20 bg-cream/5 p-6">
+    <div ref={ref} onMouseMove={move} onMouseLeave={leave} className="sk rounded-[20px] border border-cream/20 bg-cream/5 p-6 md:p-8">
       <p className="label text-blush">{String(i + 1).padStart(2, '0')} {s.title}</p>
-      <div className="mt-5 flex flex-wrap gap-2">
-        {s.items.map((x) => <span key={x} className="rounded-full border border-cream/50 px-3 py-1 text-[13px]">{x}</span>)}
+      <div className="mt-6 flex flex-wrap gap-2">
+        {s.items.map(([name, level]) => <span key={name} className={`rounded-full px-3 py-1 text-[13px] ${lvl[level]}`}>{name}</span>)}
       </div>
     </div>
   )
@@ -59,13 +65,14 @@ export default function Skills() {
     <section id="skills" ref={root} className="relative overflow-hidden bg-wine py-24">
       <div className="overflow-hidden"><Row words={row1} cls="r1" /><Row words={row2} cls="r2" /></div>
       <div className="px-6 pt-16 md:px-16">
-        <h2 className="mb-8 font-display text-[10vw] font-extrabold leading-none md:text-[4vw]">My toolbox. <span className="font-serif font-normal italic text-blush">Always getting heavier.</span></h2>
-        <div className="sk-grid grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <p className="label text-blush">Skills</p>
+        <h2 className="mb-6 mt-3 font-display text-[10vw] font-extrabold leading-none md:text-[4vw]">My toolbox. <span className="font-serif font-normal italic text-blush">Always getting heavier.</span></h2>
+        <div className="mb-8 flex flex-wrap items-center gap-2 text-[13px]">
+          <span className="label mr-2 opacity-60">Level</span>
+          {Object.keys(lvl).map((k) => <span key={k} className={`rounded-full px-3 py-1 ${lvl[k]}`}>{k}</span>)}
+        </div>
+        <div className="sk-grid grid gap-5 lg:grid-cols-2">
           {skills.map((s, i) => <Card key={s.title} s={s} i={i} />)}
-          <div className="sk rounded-[20px] bg-rose p-6 text-ink">
-            <p className="label">08 Now</p>
-            <p className="mt-5 font-display text-2xl font-extrabold leading-tight">Learning: React, Next.js.<br />Building: Finance App.</p>
-          </div>
         </div>
       </div>
     </section>
