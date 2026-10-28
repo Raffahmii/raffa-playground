@@ -1,3 +1,4 @@
+
 <div align="center">
 
 # 🎨 Raffa's Playground
@@ -32,45 +33,31 @@ Because learning should be fun. This site is a space to experiment with web tech
 
 ---
 
-## 📸 Preview
-
-<div align="center">
-
-### 🎯 Hero Section
-<img src="./public/img/projects/jejak-visual/preview.jpg" alt="Hero Preview" width="100%" style="border-radius: 12px; margin-bottom: 20px;" />
-
-### 🖥️ Project Showcase
-<img src="./public/img/projects/jejak-visual/desktop-1.png" alt="Project Showcase" width="48%" style="border-radius: 8px;" />
-<img src="./public/img/projects/amazon-sales-analysis/desktop-1.png" alt="Dashboard Showcase" width="48%" style="border-radius: 8px;" />
-
-</div>
-
----
-
 ## 🚀 Key Features
 
-<table>
-  <tr>
-    <td width="50%">
-      <h3>🎬 Cinematic Transitions</h3>
-      <p>Page transitions using <b>Framer Motion</b> that feel like a movie—from the "Curtain Reveal" blocks to the "Line-to-Circle" expand effect.</p>
-    </td>
-    <td width="50%">
-      <h3>📜 Scroll as a Story</h3>
-      <p>Using <b>GSAP ScrollTrigger</b>, the website behaves like an 8-scene film, featuring horizontal project scrolling, pinned timelines, and parallax effects.</p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <h3>🧲 Micro-Interactions</h3>
-      <p>Custom cursor, magnetic buttons, instant hover states, and <b>Physics-based Sticker Pile</b> using Matter.js. Every click makes a sound.</p>
-    </td>
-    <td width="50%">
-      <h3>🗂️ Interactive Certificates</h3>
-      <p>A curated "Wall of Fame" where certificates are showcased in an asymmetric layout, complete with a portal-style modal view.</p>
-    </td>
-  </tr>
-</table>
+### 🎬 Cinematic Page Transitions
+- **Curtain Reveal:** Entering a case study page triggers a "curtain" animation where two blocks drop from the top and slide back up.
+- **Portal Exit:** Navigating back home activates a "Line-to-Circle" effect where a vertical line expands into a massive circle, covering the screen before transitioning.
+- **Loader Animation:** A custom loading screen with a morphing monogram and a real-time loading counter.
+
+### 📜 Scroll as a Story
+- **Horizontal Project Showcase:** Utilizing GSAP `ScrollTrigger` with `pin` and `scrub` to create a seamless horizontal scrolling gallery for projects.
+- **Pinned Timeline:** The "Story" section pins the screen, revealing milestone cards with a vertical SVG path drawing effect as the user scrolls.
+- **Parallax & Reveal:** Images in the "Beyond" section move at different speeds with a clip-path reveal.
+
+### 🧲 Micro-Interactions & Physics
+- **Custom Cursor:** A custom-built cursor that changes state (e.g., "View", "Drag", "Talk") based on the hovered element.
+- **Magnetic Buttons:** Buttons and badges that slightly attract towards the user's cursor.
+- **Physics-based Stickers:** The "Beyond Code" section features a canvas powered by **Matter.js** where stickers fall, collide, and can be dragged around.
+- **Interactive Sound Effects:** A custom `useSound` hook that plays a `blob.mp3` sound on every click (buttons, links, menu).
+
+### 🗂️ Interactive Certificate Gallery
+- **Asymmetric Layout:** Certificates are displayed in an editorial-style, non-symmetrical grid.
+- **Lightbox Modal:** Clicking a certificate opens a modal with a "Line-to-Circle" expanding background animation, keeping the user immersed.
+
+### 🎨 Design System
+- **Color Palette:** A purely tonal palette dominated by `Ink`, `Wine`, `Burgundy`, `Claret`, `Rose`, and `Cream` (No orange!).
+- **Typography:** Bricolage Grotesque for display, Instrument Serif for accents, Inter for body text, and Space Mono for labels.
 
 ---
 
@@ -86,22 +73,17 @@ This project is built with modern web technologies to ensure high performance, s
   - [Lenis](https://lenis.darkroom.engineering/) (Smooth inertia scrolling)
 - **Interactions:**
   - [Matter.js](https://brm.io/matter-js/) (2D Physics engine for stickers)
-- **Typography:**
-  - Bricolage Grotesque (Display)
-  - Instrument Serif (Accent)
-  - Inter (Body)
-  - Space Mono (Labels)
-- **Data:** Local JSON files (Easy content management without a backend)
+- **Data Management:** Local JSON files (`projects.json`, `certificates.json`, etc.) for easy content management without a backend.
 - **Deployment:** [Vercel](https://vercel.com/)
 
 ---
 
 ## ⚡ Performance & Accessibility
 
-- **60 FPS Animations:** Using `transform` and `opacity` combined with `will-change` and GPU acceleration.
-- **Responsive:** Redesigned layouts for mobile (e.g., horizontal scroll is disabled on mobile, replaced with vertical cards).
-- **Accessibility:** Respects `prefers-reduced-motion`, keyboard navigation support, and semantic HTML.
-- **Lazy Loading:** Images and videos are loaded asynchronously to ensure fast initial load times.
+- **60 FPS Animations:** Optimized using `transform` and `opacity` combined with `will-change` and GPU acceleration (`translateZ(0)`).
+- **Responsive:** Desktop and Mobile layouts are completely separated where necessary (e.g., Navbar, horizontal scroll is disabled on mobile).
+- **Accessibility (a11y):** Respects `prefers-reduced-motion`, supports keyboard navigation, and uses semantic HTML.
+- **Lazy Loading:** Images and videos are loaded asynchronously (`loading="lazy"`, `decoding="async"`).
 
 ---
 
@@ -111,7 +93,7 @@ Want to explore the code? Follow these steps:
 
 ### Prerequisites
 - Node.js (v18 or higher)
-- npm or pnpm or yarn
+- npm (or pnpm / yarn)
 
 ### Installation
 
@@ -144,19 +126,19 @@ Want to explore the code? Follow these steps:
 ```text
 raffa-playground/
 ├── public/
-│   ├── brand/          # Logos & monogram
-│   ├── img/            # Project screenshots & avatars
-│   ├── photos/         # Gallery photos (Beyond section)
+│   ├── brand/          # Logos, monograms, and wordmarks
+│   ├── img/            # Project screenshots, avatars, certificates
+│   ├── photos/         # Gallery photos for the Beyond section
 │   ├── sound/          # UI click sounds (blob.mp3)
-│   └── textures/       # Grain & contour patterns
+│   └── textures/       # Grain and contour patterns
 ├── src/
-│   ├── assets/         # Global assets
+│   ├── assets/         # Global static assets
 │   ├── components/
 │   │   ├── global/     # Navbar, Cursor, Loader, Grain
 │   │   ├── scenes/     # Hero, WhatIDo, Projects, Story, Beyond, Skills, Contact
 │   │   └── ui/         # Reusable UI (Magnetic, Chars, Marquee, StickerPile)
 │   ├── config/         # Site configuration (site.js)
-│   ├── data/           # Content data (projects.json, certificates.json, dll)
+│   ├── data/           # Content data (projects.json, certificates.json, etc.)
 │   ├── hooks/          # Custom hooks (useSound, useLenis)
 │   ├── pages/          # Home, CaseStudy, Certificates, NotFound
 │   └── index.css       # Global styles & Tailwind theme
@@ -166,9 +148,20 @@ raffa-playground/
 
 ---
 
+## 🧠 Lessons Learned & Challenges
+
+Building this website was a journey. Here are some key takeaways:
+
+1. **Horizontal Scroll on Mobile is a Trap:** Initially, I used horizontal scrolling for projects on mobile. It caused terrible UX. I learned to disable it on mobile and replace it with a vertical card layout.
+2. **GSAP ScrollTrigger in React:** Managing `ScrollTrigger` in React can be tricky. Using `@gsap/react` (`useGSAP`) was a lifesaver for cleaning up animations and preventing memory leaks.
+3. **Performance is King:** Using `clip-path` and animating width/height looked cool, but tanked performance. Replacing them with `transform` and `opacity` made the site fly.
+4. **Sound Design Matters:** Adding subtle click sounds (`blob.mp3`) made the interactions feel much more tactile and satisfying.
+
+---
+
 ## 🤝 Let's Connect!
 
-I'm always open to collaborating on interesting projects, discussing data, or just talking about tech and design. 
+I'm always open to collaborating on interesting projects, discussing data, or just talking about tech and design.
 
 - **Website:** [mraffaizzelh.vercel.app](https://mraffaizzelh.vercel.app)
 - **LinkedIn:** [M. Raffa Izzel Hendro](https://www.linkedin.com/in/raffa-izzel/)
