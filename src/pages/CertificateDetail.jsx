@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import certs from "../data/certificates.json";
 import Magnetic from "../components/ui/Magnetic";
+import { useSound } from "../hooks/useSound"; // Tambahan buat sound di tombol back
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,6 +23,7 @@ export default function CertificateDetail() {
   const navigate = useNavigate();
   const p = certs.find((x) => x.slug === slug);
   const containerRef = useRef(null);
+  const playSound = useSound(); // Panggil Hook
 
   const [isExiting, setIsExiting] = useState(false);
 
@@ -56,9 +58,10 @@ export default function CertificateDetail() {
   }, [p]);
 
   const handleBack = () => {
+    playSound();
     setIsExiting(true);
     setTimeout(() => {
-      navigate("/certificates");
+      navigate("/certificates", { state: { fromDetail: true } });
     }, 1200);
   };
 
@@ -82,7 +85,6 @@ export default function CertificateDetail() {
 
   return (
     <>
-      {/* 🚪 ANIMASI 3 BALOK MASUK */}
       <div className="fixed inset-0 z-[200] pointer-events-none flex">
         <motion.div
           initial={{ y: "-100%" }}
@@ -118,7 +120,6 @@ export default function CertificateDetail() {
         />
       </div>
 
-      {/* 🚪 ANIMASI EXIT */}
       <AnimatePresence>
         {isExiting && (
           <motion.div className="fixed inset-0 z-[300] flex items-center justify-center pointer-events-none">
@@ -150,7 +151,6 @@ export default function CertificateDetail() {
       >
         <div className="absolute top-0 left-0 w-full h-[500px] bg-[radial-gradient(ellipse_at_top,rgba(228,96,122,0.15),transparent_70%)] pointer-events-none" />
 
-        {/* HERO SECTION */}
         <div className="relative z-10 px-6 pb-24 pt-40 md:px-16">
           <div className="relative z-10 mx-auto max-w-6xl">
             <motion.div
@@ -187,12 +187,10 @@ export default function CertificateDetail() {
           </div>
         </div>
 
-        {/* MAIN CONTENT */}
         <div
           ref={containerRef}
           className="relative mx-auto max-w-6xl px-6 md:px-16 mt-8"
         >
-          {/* Squiggly Line */}
           <div className="absolute left-0 top-0 hidden h-full w-[60px] lg:block -translate-x-1/2">
             <svg
               width="60"
@@ -212,7 +210,6 @@ export default function CertificateDetail() {
             </svg>
           </div>
 
-          {/* Cover Image */}
           <motion.div
             initial={{ opacity: 0, y: 50, scale: 0.95 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -227,7 +224,6 @@ export default function CertificateDetail() {
             />
           </motion.div>
 
-          {/* Problem & Solution */}
           <div className="mt-24 grid gap-12 md:grid-cols-2 relative z-10">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -255,7 +251,6 @@ export default function CertificateDetail() {
             </motion.div>
           </div>
 
-          {/* Highlights */}
           {p.details && p.details.length > 0 && (
             <div className="mt-24 relative z-10">
               <motion.h2
@@ -291,7 +286,6 @@ export default function CertificateDetail() {
             </div>
           )}
 
-          {/* Desktop Images (Galeri Utama) */}
           {p.desktop && p.desktop.length > 0 && (
             <div className="mt-24 relative z-10">
               <motion.h2
@@ -323,7 +317,6 @@ export default function CertificateDetail() {
             </div>
           )}
 
-          {/* Gallery (Gambar Tambahan) */}
           {p.gallery && p.gallery.length > 0 && (
             <div className="mt-24 relative z-10">
               <motion.h2
@@ -355,7 +348,6 @@ export default function CertificateDetail() {
             </div>
           )}
 
-          {/* CTA Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
