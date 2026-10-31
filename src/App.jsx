@@ -1,52 +1,58 @@
-import { useEffect } from 'react'
-import { Routes, Route, useLocation } from 'react-router-dom'
-import Lenis from 'lenis'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useGSAP } from '@gsap/react'
-import Grain from './components/global/Grain'
-import Cursor from './components/global/Cursor'
-import Navbar from './components/global/Navbar'
-import Loader from './components/global/Loader'
-import Home from './pages/Home'
-import CaseStudy from './pages/CaseStudy'
-import NotFound from './pages/NotFound'
-import Certificates from './pages/Certificates'
+import { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import Lenis from "lenis";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import Grain from "./components/global/Grain";
+import Cursor from "./components/global/Cursor";
+import Navbar from "./components/global/Navbar";
+import Loader from "./components/global/Loader";
+import Home from "./pages/Home";
+import CaseStudy from "./pages/CaseStudy";
+import NotFound from "./pages/NotFound";
+import Certificates from "./pages/Certificates";
+import BackgroundMusic from "./components/global/BackgroundMusic";
 
-gsap.registerPlugin(ScrollTrigger, useGSAP)
-try { window.__loaderDone = !!sessionStorage.getItem('seen') } catch { window.__loaderDone = false }
+gsap.registerPlugin(ScrollTrigger, useGSAP);
+try {
+  window.__loaderDone = !!sessionStorage.getItem("seen");
+} catch {
+  window.__loaderDone = false;
+}
 
 export default function App() {
-  const { pathname } = useLocation()
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    const lenis = new Lenis()
-    window.__lenis = lenis
-    lenis.on('scroll', ScrollTrigger.update)
-    const tick = (t) => lenis.raf(t * 1000)
-    gsap.ticker.add(tick)
-    gsap.ticker.lagSmoothing(0)
+    const lenis = new Lenis();
+    window.__lenis = lenis;
+    lenis.on("scroll", ScrollTrigger.update);
+    const tick = (t) => lenis.raf(t * 1000);
+    gsap.ticker.add(tick);
+    gsap.ticker.lagSmoothing(0);
     return () => {
-      gsap.ticker.remove(tick)
-      lenis.destroy()
-      window.__lenis = null
-    }
-  }, [])
+      gsap.ticker.remove(tick);
+      lenis.destroy();
+      window.__lenis = null;
+    };
+  }, []);
 
   useEffect(() => {
-    const r = () => ScrollTrigger.refresh()
-    window.addEventListener('load', r)
-    document.fonts?.ready.then(r)
-    return () => window.removeEventListener('load', r)
-  }, [])
+    const r = () => ScrollTrigger.refresh();
+    window.addEventListener("load", r);
+    document.fonts?.ready.then(r);
+    return () => window.removeEventListener("load", r);
+  }, []);
 
   useEffect(() => {
-    window.__lenis?.scrollTo(0, { immediate: true })
-    ScrollTrigger.refresh()
-  }, [pathname])
+    window.__lenis?.scrollTo(0, { immediate: true });
+    ScrollTrigger.refresh();
+  }, [pathname]);
 
   return (
     <>
+      <BackgroundMusic />
       <Loader />
       <Grain />
       <Cursor />
@@ -58,5 +64,5 @@ export default function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
-  )
+  );
 }
