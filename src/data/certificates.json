@@ -1,8 +1,143 @@
 [
-  { "id": "samsung", "name": "Samsung SFT", "year": "2026", "image": "/img/certs/samsung.png" },
-  { "id": "dicoding-python", "name": "Dicoding: Python basics", "year": "2025", "image": "/img/certs/python.png" },
-  { "id": "dicoding-sql", "name": "Dicoding: SQL basics", "year": "2025", "image": "/img/certs/sql.png" },
-  { "id": "dicoding-ds", "name": "Dicoding: Data Science", "year": "2025", "image": "/img/certs/ds.png" },
-  { "id": "toeic", "name": "TOEIC", "year": "2026", "image": "/img/certs/toeic.jpeg" },
-  { "id": "pegadaian", "name": "Pegadaian Program", "year": "2026", "image": "/img/certs/pegadaian.jpeg" }
+  {
+    "slug": "samsung-sft",
+    "title": "Samsung SFT",
+    "type": "Technology Program",
+    "year": 2026,
+    "stack": ["Samsung", "Technology", "Bootcamp"],
+    "cover": "/img/certs/samsung.png",
+    "problem": "Meningkatkan skill teknis dan kesiapan kerja di industri teknologi melalui program pelatihan intensif.",
+    "solution": "Mengikuti kurikulum Samsung SFT yang berfokus pada pengembangan software, problem solving, dan kolaborasi tim.",
+    "details": [
+      {
+        "title": "Software Development",
+        "desc": "Mempelajari siklus pengembangan software dari perencanaan hingga deployment."
+      },
+      {
+        "title": "Team Collaboration",
+        "desc": "Bekerja dalam tim untuk menyelesaikan studi kasus nyata."
+      },
+      {
+        "title": "Industry Readiness",
+        "desc": "Mempersiapkan diri untuk masuk ke dunia kerja profesional."
+      }
+    ],
+    "desktop": [],
+    "mobile": [],
+    "video": "",
+    "gallery": []
+  },
+  {
+    "slug": "dicoding-certificates",
+    "title": "Dicoding Academy",
+    "type": "Online Course",
+    "year": 2025,
+    "stack": ["Data Science", "Python", "SQL"],
+    "cover": "/img/certs/ds.png",
+    "problem": "Butuh validasi skill teknis (Data Science, Python, SQL) untuk menunjang karir di bidang data.",
+    "solution": "Menyelesaikan kelas dasar hingga menengah di Dicoding dengan predikat kelulusan yang memuaskan.",
+    "details": [
+      {
+        "title": "Data Science",
+        "desc": "Memahami dasar-dasar statistika, visualisasi data, dan machine learning."
+      },
+      {
+        "title": "Python Basics",
+        "desc": "Menguasai sintaks dasar Python, struktur data, dan OOP."
+      },
+      {
+        "title": "SQL Basics",
+        "desc": "Mampu menulis query SQL untuk mengambil dan memanipulasi data."
+      }
+    ],
+    "desktop": [
+      "/img/certs/pdf to png/ds/ds-1.png",
+      "/img/certs/pdf to png/ds/ds-2.png",
+      "/img/certs/pdf to png/ds/ds-3.png"
+    ],
+    "mobile": [],
+    "video": "",
+    "gallery": [
+      "/img/certs/pdf to png/ds/ds-4.png",
+      "/img/certs/pdf to png/python/python-1.png",
+      "/img/certs/pdf to png/python/python-2.png",
+      "/img/certs/pdf to png/sql/sql-1.png",
+      "/img/certs/pdf to png/sql/sql-2.png"
+    ]
+  },
+  {
+    "slug": "chess-achievements",
+    "title": "Chess Achievements",
+    "type": "Competition",
+    "year": "2023-2026",
+    "stack": ["Competition", "Organization"],
+    "cover": "/img/certs/sertifikat/Sertifikat_Chess/piala.jpeg",
+    "problem": "Mendokumentasikan prestasi dan kontribusi di dunia catur agar bisa dilihat oleh publik.",
+    "solution": "Mengumpulkan semua bukti fisik dan digital (sertifikat, piala, surat kepanitiaan) ke dalam satu arsip digital.",
+    "details": [
+      {
+        "title": "Competition",
+        "desc": "Meraih prestasi di berbagai turnamen catur tingkat sekolah dan daerah."
+      },
+      {
+        "title": "Committee",
+        "desc": "Terlibat aktif sebagai panitia dalam penyelenggaraan event catur."
+      },
+      {
+        "title": "Beasiswa",
+        "desc": "Mendapatkan beasiswa atas prestasi di bidang catur."
+      }
+    ],
+    "desktop": [
+      "/img/certs/sertifikat/Sertifikat_Chess/sertifikat-1.jpeg",
+      "/img/certs/sertifikat/Sertifikat_Chess/sertifikat-2.jpeg"
+    ],
+    "mobile": [],
+    "video": "",
+    "gallery": [
+      "/img/certs/sertifikat/Sertifikat_Chess/beasiswa.jpeg",
+      "/img/certs/sertifikat/Sertifikat_Chess/all-sertifikat.jpeg"
+    ]
+  },
+  {
+    "slug": "toeic",
+    "title": "TOEIC",
+    "type": "Language",
+    "year": 2026,
+    "stack": ["ETS", "English", "Language"],
+    "cover": "/img/certs/toeic.jpeg",
+    "problem": "Butuh bukti kemampuan bahasa Inggris yang diakui secara internasional.",
+    "solution": "Mengikuti tes TOEIC dan mendapatkan skor yang memadai.",
+    "details": [
+      {
+        "title": "Listening",
+        "desc": "Kemampuan memahami percakapan bahasa Inggris."
+      },
+      { "title": "Reading", "desc": "Kemampuan memahami teks bahasa Inggris." }
+    ],
+    "desktop": [],
+    "mobile": [],
+    "video": "",
+    "gallery": []
+  },
+  {
+    "slug": "pegadaian",
+    "title": "Pegadaian",
+    "type": "Workshop",
+    "year": 2026,
+    "stack": ["Workshop", "Business"],
+    "cover": "/img/certs/pegadaian.jpeg",
+    "problem": "Mendapatkan wawasan praktis tentang literasi keuangan dan bisnis.",
+    "solution": "Mengikuti workshop yang diadakan oleh Pegadaian.",
+    "details": [
+      {
+        "title": "Financial Literacy",
+        "desc": "Memahami pentingnya pengelolaan keuangan."
+      }
+    ],
+    "desktop": [],
+    "mobile": [],
+    "video": "",
+    "gallery": []
+  }
 ]

@@ -12,6 +12,7 @@ import Home from "./pages/Home";
 import CaseStudy from "./pages/CaseStudy";
 import NotFound from "./pages/NotFound";
 import Certificates from "./pages/Certificates";
+import CertificateDetail from "./pages/CertificateDetail";
 import BackgroundMusic from "./components/global/BackgroundMusic";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -61,6 +62,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/work/:slug" element={<CaseStudy />} />
         <Route path="/certificates" element={<Certificates />} />
+        <Route path="/certificates/:slug" element={<CertificateDetail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

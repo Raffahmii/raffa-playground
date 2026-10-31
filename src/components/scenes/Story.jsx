@@ -7,7 +7,7 @@ import timeline from "../../data/timeline.json";
 import narrative from "../../data/narrative.json";
 import certs from "../../data/certificates.json";
 import Star from "../ui/Star";
-import { useSound } from "../../hooks/useSound"; // Import Sound Hook
+import { useSound } from "../../hooks/useSound";
 
 const pad = (n) => String(n).padStart(2, "0");
 const PATH =
@@ -18,7 +18,7 @@ export default function Story() {
   const wrap = useRef(null);
   const pv = useRef(null);
   const [hov, setHov] = useState(null);
-  const playSound = useSound(); // Panggil Hook
+  const playSound = useSound();
 
   useGSAP(
     () => {
@@ -354,7 +354,7 @@ export default function Story() {
                 <span
                   className={`flex-1 font-display text-2xl font-extrabold transition-transform duration-300 md:text-4xl ${hov === i ? "translate-x-4" : ""}`}
                 >
-                  {c.name}
+                  {c.title}
                 </span>
                 <span className="label hidden sm:block">{c.year}</span>
                 <span
@@ -365,9 +365,13 @@ export default function Story() {
               </div>
             );
             return (
-              <li key={c.id}>
-                {/* TAMBAH ONCLICK PLAYSOUND DI SINI */}
-                <Link to="/certificates" onClick={playSound} data-cursor="View">
+              <li key={c.slug}>
+                {/* Arahin ke detail spesifik berdasarkan slug */}
+                <Link
+                  to={`/certificates/${c.slug}`}
+                  onClick={playSound}
+                  data-cursor="View"
+                >
                   {inner}
                 </Link>
               </li>
@@ -381,15 +385,15 @@ export default function Story() {
           style={{ opacity: hov === null ? 0 : 1 }}
         >
           {hov !== null &&
-            (certs[hov].image ? (
+            (certs[hov].cover ? (
               <img
-                src={certs[hov].image}
+                src={certs[hov].cover}
                 alt=""
                 className="h-full w-full object-cover"
               />
             ) : (
               <span className="label flex h-full items-center justify-center p-4 text-center text-blush">
-                {certs[hov].name}
+                {certs[hov].title}
               </span>
             ))}
         </div>
